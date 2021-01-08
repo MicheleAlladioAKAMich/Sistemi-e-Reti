@@ -5,15 +5,16 @@ es: generare un indirizzo MAC
 import random, string   #importo le librerie
 
 def generaMac():
-    #si definisce il formato del messaggio -> 2 caratteri:2 caratteri:2 caratteri:2 caratteri:........
-    #successivamente si estraggono due caratteri random tra numeri e lettere maiuscole per 6 volte
+    """si definisce il formato del messaggio -> 2 caratteri:2 caratteri:2 caratteri:2 caratteri:........
+    successivamente si estraggono due caratteri random tra numeri e una stringa contentente i caratteri esadecimali"""
+    caratteriEsadecimali = 'ABCDEF'
     return "%02s:%02s:%02s:%02s:%02s:%02s" % (  
-    random.choice(string.ascii_uppercase + string.digits) + random.choice(string.ascii_uppercase + string.digits),
-    random.choice(string.ascii_uppercase + string.digits) + random.choice(string.ascii_uppercase + string.digits),
-    random.choice(string.ascii_uppercase + string.digits) + random.choice(string.ascii_uppercase + string.digits),
-    random.choice(string.ascii_uppercase + string.digits) + random.choice(string.ascii_uppercase + string.digits),
-    random.choice(string.ascii_uppercase + string.digits) + random.choice(string.ascii_uppercase + string.digits),
-    random.choice(string.ascii_uppercase + string.digits) + random.choice(string.ascii_uppercase + string.digits),
+    random.choice(caratteriEsadecimali + string.digits) + random.choice(caratteriEsadecimali + string.digits),
+    random.choice(caratteriEsadecimali + string.digits) + random.choice(caratteriEsadecimali + string.digits),
+    random.choice(caratteriEsadecimali + string.digits) + random.choice(caratteriEsadecimali + string.digits),
+    random.choice(caratteriEsadecimali + string.digits) + random.choice(caratteriEsadecimali + string.digits),
+    random.choice(caratteriEsadecimali + string.digits) + random.choice(caratteriEsadecimali + string.digits),
+    random.choice(caratteriEsadecimali + string.digits) + random.choice(caratteriEsadecimali + string.digits),
     )
     
 def main():
