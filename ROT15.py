@@ -34,9 +34,17 @@ def ROT15ToNormale(stringaEntrata): #conversione da ROT-15 ad alfabeto normale
     return stringOutput
 
 def main():
-    stringa = input("Inserisci una stringa (in alfabeto normale): ")
-    print("ROT-15: " + normaleToROT15(stringa))
-    print("ALFABETO NORMALE: " + ROT15ToNormale(normaleToROT15(stringa)))
+    scelta = input("in che formato vuoi inserire la frase? (ROT-15 o alfabeto): ")
+    stringa = input("Inserisci una stringa: ")
+
+    if scelta == "ROT-15":
+        print(f"ALFABETO NORMALE: {ROT15ToNormale(stringa)}")
+        print(f"ROT-15: {stringa}")
+    elif scelta == "alfabeto":
+        print(f"ROT-15: {normaleToROT15(stringa)}")
+        print(f"ALFABETO NORMALE: {stringa}")
+    else:
+        print("assicurati che tu abbia scritto correttamente ROT-15 o alfabeto")
 
 if __name__ == "__main__":
     main()  #richiamo il main
